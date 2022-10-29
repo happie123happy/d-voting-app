@@ -16,9 +16,13 @@
                 <div class="row g-0">
                     <div class="col-lg-6">  
                         <h1 class="mt-5 pb-1 gradient-text text-center"><b>Sign Up</b></h1>
-                        <div class="card-body p-md-5 mx-md-4 text-center" style="margin:100px auto;"> <!--style="margin:200px auto" -->
+                        <div class="card-body p-md-5 mx-md-4 text-center"> <!--style="margin:200px auto" -->
                             <!-- <div class="center">                                       -->
-                                <img src="img/National-Emblem.jpg" class="img-fluid" alt="Responsive image" style="width:85%">
+                                <img src="img/National-Emblem.jpg" class="img-fluid" alt="Responsive image">
+                                <div class="py-5">
+                                  <h4 class="mt-1 mb-5 pb-1">ELECTION COMMISSION OF INDIA</h4>
+                                </div>
+                                
                             <!-- </div>                                   -->
                         </div>
                 </div>
@@ -52,11 +56,11 @@
                                   <p {% if message.tags %} class="w-100 pl-3 mx-auto alert-{{ message.tags }}" {% endif %}> {{ message }} </p>
                                   {% endfor %}
                                 </ul>
-                                {% endif %} -->
+                                {% endif %} -->   
                                 <div class="d-flex align-items-center justify-content-center pb-4">
-                                  <p class="mb-0 me-2">Already have an account? </p>
-                                  <button type="button" class="btn btn-outline-danger" href="login_page.ejs" style="color:white">Login here</button>
-                                </div>    
+                                  <p class="mb-0 me-2">Already have an account?</p>&nbsp;&nbsp;
+                                  <a class="btn btn-outline-danger" href="/login" role="button" style="color:white">Login here</a>
+                                </div> 
                               </form>  
                             </div>
                           </div>

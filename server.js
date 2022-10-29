@@ -20,7 +20,22 @@ app.use('/img',express.static(path.resolve(__dirname,"assests/img")))
 
 app.get('/',(req,res)=>{
     // res.send("d-voting-app");
-    res.render("vote_page.ejs");
+    res.render("login_page.ejs");
+})
+
+app.get('/login',(req,res)=>{
+    // res.send("d-voting-app");
+    res.render("login_page.ejs");
+})
+
+app.get('/vote',(req,res)=>{
+    // res.send("d-voting-app");
+    res.render("vote_page.ejs",{name:"Sasi",Aadhar:"123456789012"});
+})
+
+app.get('/signup',(req,res)=>{
+    // res.send("d-voting-app");
+    res.render("signup_page.ejs");
 })
 
 app.listen(PORT,()=>{console.log(`Server is running on https://localhost:${PORT}`)});
