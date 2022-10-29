@@ -4,7 +4,7 @@ const morgan=require('morgan');
 const bodyparser=require('body-parser');
 const path=require('path');
 const app=express();
-dotenv.config({path:'config.env'})
+dotenv.config({path:'views/config.env'});
 const PORT=process.env.PORT||8080
 
 //log request
@@ -18,24 +18,6 @@ app.set("view engine","ejs")
 app.use('/css',express.static(path.resolve(__dirname,"assests/css")))
 app.use('/img',express.static(path.resolve(__dirname,"assests/img")))
 
-app.get('/',(req,res)=>{
-    // res.send("d-voting-app");
-    res.render("login_page.ejs");
-})
-
-app.get('/login',(req,res)=>{
-    // res.send("d-voting-app");
-    res.render("login_page.ejs");
-})
-
-app.get('/vote',(req,res)=>{
-    // res.send("d-voting-app");
-    res.render("vote_page.ejs",{name:"Sasi",Aadhar:"123456789012"});
-})
-
-app.get('/signup',(req,res)=>{
-    // res.send("d-voting-app");
-    res.render("signup_page.ejs");
-})
+app.use('/',require('./server/routes/router'))
 
 app.listen(PORT,()=>{console.log(`Server is running on https://localhost:${PORT}`)});
