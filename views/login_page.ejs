@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<section style="background-color: #eee;">
+    <div class="container py-5">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-xl-10 pl-0 pr-0">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="card-body p-md-5 mx-md-4">
+                  <div class="text-center">
+                  <img src="img/National-Emblem.jpg"
+                      style="width: 185px;" alt="logo"> 
+                    <h4 class="mt-1 mb-5 pb-1">ELECTION COMMISSION OF INDIA</h4>
+                      </div>
+                      <form action="login_page.ejs" method="POST">
+                        <div class="form-outline mb-4">
+                <label class="form-label">Email</label>
+                          <input type="email"  class="form-control" name="email"
+                            placeholder="Email" required/>
+                        </div>
+                        <div class="form-outline mb-4">
+                            <label class="form-label">Password</label>
+                          <input  name="password" type="password" class="form-control validate" placeholder="Password" required title="8 characters minimum"/>
+                        </div>
+                        <div class="text-center pt-1 mb-5 pb-1">
+                          <button class="btn btn-primary btn-block fa-lg gradient-design mb-3" type="submit">Log
+                            in</button>
+                          <a class="text-muted" href="#!">Forgot password?</a>
+                        </div>   
+                        <div class="d-flex align-items-center justify-content-center pb-4">
+                          <p class="mb-0 me-2">Don't have an account?</p>&nbsp;&nbsp;
+                          <a class="btn btn-outline-danger" name="sys" href="signup_page.ejs" role="button">Create new</a>
+                        </div>    
+                      </form> 
+                  <!-- {% if messages %}
+                  <ul class="messages d-flex flex-column justify-content-center align-items-center">
+                    {% for message in messages %}
+                    <p {% if message.tags %} class="w-100 pl-3 mx-auto alert-{{ message.tags }}" {% endif %}> {{ message }} </p>
+                    {% endfor %}
+                  </ul>
+                  {% endif %} -->
+                </div>
+              </div>
+              <div class="col-lg-6 d-flex align-items-center gradient-design">
+                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                  <h4 class="mb-4">
+                    WELCOME TO
+                    ELECTION COMMISSION OF INDIA</h4>
+                  <p class="small mb-0">The Election Commission of India (ECI) is a constitutional body. It was established by the Constitution of India to conduct and regulate elections in the country. Article 324 of the Constitution provides that the power of superintendence, direction, and control of elections to parliament, state legislatures, the office of the president of India, and the office of vice-president of India shall be vested in the election commission. Thus, the Election Commission is an all-India body in the sense that it is common to both the Central government and the state governments.
+                    The body administers elections to the Lok Sabha, Rajya Sabha, State Legislative Assemblies, State Legislative Councils and the offices of the President and Vice President of the country. The Election Commission operates under the authority of Constitution per Article 324,and subsequently enacted Representation of the People Act.The commission has the powers under the Constitution, to act in an appropriate manner when the enacted laws make insufficient provisions to deal with a given situation in the conduct of an election. Being a constitutional authority, Election Commission is amongst the few institutions which function with both autonomy and freedom, along with the country's higher judiciary, the Union Public Service Commission and the Comptroller and Auditor General of India. It is a permanent constitutional body.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
