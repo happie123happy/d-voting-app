@@ -20,7 +20,7 @@ app.use('/img',express.static(path.resolve(__dirname,"assests/img")))
 
 app.get('/',(req,res)=>{
     // res.send("d-voting-app");
-    res.render("login_page.ejs");
+    res.render("vote_page.ejs");
 })
 
 app.listen(PORT,()=>{console.log(`Server is running on https://localhost:${PORT}`)});

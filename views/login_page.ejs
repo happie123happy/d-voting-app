@@ -25,10 +25,9 @@
                       </div>
                       <form action="login_page.ejs" method="POST">
                         <div class="form-outline mb-4">
-                <label class="form-label">Email</label>
-                          <input type="email"  class="form-control" name="email"
-                            placeholder="Email" required/>
-                        </div>
+                          <label class="form-label">Aadhar Number</label>
+                          <input  type="tel" name="phone" class="form-control form-control" pattern="[0-9]{12}" placeholder="phone number" required/> 
+                      </div>
                         <div class="form-outline mb-4">
                             <label class="form-label">Password</label>
                           <input  name="password" type="password" class="form-control validate" placeholder="Password" required title="8 characters minimum"/>
